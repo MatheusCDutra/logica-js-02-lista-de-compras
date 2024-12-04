@@ -26,7 +26,6 @@ body {
 
 main {
     margin-top: 64px;
-
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -113,4 +112,41 @@ ul {
 .item-lista-texto {
     font-size: 12px;
     line-height: 20px;
+}
+
+.checkbox-input {
+    display: none;
+}
+
+.checkbox-customizado {
+    width: 20px;
+    height: 20px;
+    background-color: var(--neutro);
+    border: 1px solid var(--preto);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.checked {
+    background-color: var(--preto);
+    position: relative;
+}
+
+.checked::after {
+    content: "";
+    position: absolute;
+    left: 30%;
+    top: -10%;
+    width: 5px;
+    height: 14px;
+
+    border-top: 2px solid var(--neutro);
+    border-left: 2px solid var(--neutro);
+    transform: rotate(-140deg);
+}
+
+.botao-acao {
+    background-color: transparent;
+    border: none;
 }
